@@ -6,6 +6,20 @@ import projPOO01.GestionAchat.Achat;
 
 public interface IClient {
 	public void achete(List<Achat> listachat);
-	public boolean paie();
-	public boolean isClient();
+
+	/**
+	 * @return retourne faux par défaut
+	 */
+	public default boolean paie() {
+		return false;
+	}
+
+	/**
+	 * Pour savoir si client
+	 * 
+	 * @return retourne faux par défaut
+	 */
+	public default boolean isClient() {
+		return false;
+	}
 }
